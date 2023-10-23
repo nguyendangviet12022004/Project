@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+/*RESET****************************************************************/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto',sans-serif;
+}
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+.flex{
+    display: flex;
+}
+
+.grid{
+    display: grid;
+}
+
+.title{
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    margin-top: 7rem;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+header {
+    margin-bottom: 7rem;
+}
+
+
+hr{
+    margin-bottom: 5rem;
+}
+
+p{
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+/*NAV**************************************************************/
+
+header > nav {
+    padding: 0.5rem 0.25rem;
+    box-shadow: 1px 1px 10px grey;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 3;
+    background-color: white;
+}
+a[href="#header"] > span
+{
+    font-weight: 900;
+}
+header > nav > ul a{
+    color: black;
+    font-weight: 400;
+    font-size: 1.25rem;
+    padding: 0.4rem 2rem;
+    display: block;
+    letter-spacing: 0.25rem;
+}
+
+header > nav > ul a:hover{
+    
+    background-color: rgb(204, 204, 204);
+}
+header > nav > .flex{
+    justify-content: space-between;
+}
+
+header > nav > ul > .grid{
+    grid-auto-flow: column;
+}
+
+
+/*#Header**********************************************************************************************************************************************/
+
+#header{
+    margin-top: 3.25rem;
+    background-image: url(img/architect.jpg);
+    width: 100%;
+    height: 50vw;
+    background-size: cover;
+    background-position: bottom;
+    justify-items: center;
+    align-items: center;
+}
+
+#header > div{
+    display: block;
+    font-size: 3rem;
+    font-weight: 300;
+    letter-spacing: 0.25rem;
+    color: white;
+}
+
+#header > div > span{
+    display: inline-block;
+    font-weight: 900;
+    background-color: black;
+    opacity: 0.7;
+    padding: 0.5rem 1rem;
+    margin-right: 0.5rem;
+}
+
+#header > div > p{
+    display: inline;
+}
+
+/*MAIN*************************************************************************************************************************************/
+
+main{
+    padding: 0 2rem;
+}
+/*project*********************************************************************************************************************************/
+
+#project .grid{
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap:1.25rem;
+}
+
+#project .grid > div {
+    position: relative;
+}
+#project .grid > div > img{
+    width: 100%;
+}
+
+#project .grid > div > p{
+    position: absolute;
+    top: 0;
+    background-color: black;
+    width: 10rem;
+    color: white;
+    padding: 0.75rem 0;
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+/*about*******************************************************************************************************************************/
+#about .grid{
+    margin-top: 3rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap:2rem;
+    width: 100%;
+}
+
+#about .grid > div > img{
+    width: 100%;
+}
+#about .grid > div > h3{
+    font-size: 2rem;
+    font-weight: 400;
+    margin: 2rem 0;
+
+}
+#about .grid > div .position{
+    margin: 2rem 0;
+}
+
+#about .grid > div > button{
+    width: 100%;
+    padding: 0.5rem 0;
+    font-size: 1.25rem;
+    margin: 1rem 0;
+    background-color: rgb(241, 241, 241);
+    border: none;
+}
+
+#about .grid > div > button:hover{
+    background-color: white;
+    color: black;
+}
+
+/*Contact*****************************************************************************************/
+
+#contact > form > input{
+    display: block;
+    width: 100%;
+    margin: 1rem 0;
+    padding: 0.5rem;
+}
+
+::placeholder{
+    font-size: 1.15rem;
+}
+
+#contact > form > button{
+    background-color: black;
+    color: white;
+    font-size: 1.25rem;
+    padding: 0.5rem 1rem;
+    margin-bottom: 4rem;
+}
+
+main > img{
+    width: 100%;
+}
+
+footer{
+    background-color: black;
+    padding: 2rem;
+    text-align: center;
+    color: white;
+}
+
+footer a{
+    text-decoration: underline;
+    color: white;
+}
+
+@media screen and (max-width:1200px){
+    #project .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    #about .grid{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen  and (max-width:720px){
+    header > nav > ul > .grid{
+        display: none;
+    }
+
+    #header > div > p{
+        display: none;
+    }
+
+    #project .grid {
+        grid-template-columns: 1fr;
+    }
+
+    #about .grid{
+        grid-template-columns: 1fr;
+    }
+
+    
+}
