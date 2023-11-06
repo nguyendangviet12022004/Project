@@ -1,0 +1,181 @@
+/** RESET CSS*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: Helvetica, Arial,sans-serif;
+}
+
+ul{
+    list-style: none;
+}
+
+.clearfix::after{
+    display: block;
+    content: '.';
+    clear: both;
+    overflow: auto;
+}
+#main{
+
+}
+#header{
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    width: 100%;
+    height: 46px;
+    background-color: #000;
+}
+
+#nav{
+    display: inline-block;
+}
+
+#nav>li{
+    display: inline-block;
+    position: relative;
+}
+
+#nav > li > a{
+    color:#fff;
+    text-transform: uppercase;
+}
+
+
+#nav li a{
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0px 24px;
+    display: inline-block;
+}
+
+#nav li a:hover{
+    background-color: rgb(204, 204, 204);
+    color: black;
+}
+
+#nav li:hover .subnav{
+    display: block;
+}
+#nav .subnav{
+    display: none;
+    min-width: 160px;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#nav .subnav a{
+    padding: 0 12px;
+    color: #000;
+    display: block;
+    line-height: 38px;
+}
+
+#nav .nav-arrow-down{
+    font-size: 14px;
+ 
+}
+
+#header .search-btn{
+    float: right;
+    height: 46px;
+    display: grid;
+    align-content: center;
+    padding: 1.2rem;
+}
+
+#header .search-btn:hover{
+    background-color: rgb(244, 67, 54);
+    cursor: pointer;
+}
+#header .search-icon{
+    font-size: 14px;
+    color: white;
+}
+
+#slider{
+    margin-top: 46px;
+    padding-top: 50%;
+    background: url('/TheBand/assets/img/chicago.jpg') top center / cover no-repeat;
+    position: relative;
+}   
+#slider .text-content{
+    position: absolute;
+    left: 50%;
+    bottom: 47px;
+    color: white;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+#slider .text-content .text-heading{
+    font-weight: 500;
+    font-size: 24px;
+}
+
+#slider .text-content .text-description{
+    font-size: 15px;
+    margin-top: 25px;
+}
+
+#content{
+
+}
+
+#content .content-section{
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 64px 0;
+}
+
+#content .section-heading{
+    font-size: 30px;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 4px;
+}
+
+#content .section-sub-heading{
+    font-size: 16px;
+    text-align: center;
+    margin-top: 25px;
+    font-style: italic;
+    opacity: 0.5;
+}
+
+#content .about-text{
+    margin-top: 25px;
+    font-size: 15px;
+    text-align: justify;
+    line-height: 20px;
+}
+
+#content .member-list{
+    padding-top: 48px;
+}
+
+
+
+#content .member-item{
+    float: left;
+    width: calc(100%/3);
+    text-align: center;
+}
+#content .member-name{
+    font-size: 15px;
+}
+
+#content .member-img{
+    margin-top: 15px;
+    width: 154px;
+    border-radius: 4px;
+}
+#footer{
+
+}

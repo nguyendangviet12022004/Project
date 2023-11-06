@@ -1,0 +1,196 @@
+html {
+  scroll-behavior: smooth;
+}
+
+hr {
+  color: gray;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  scroll-behavior: smooth;
+  display: block;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.title {
+  font-weight: 300;
+  font-size: 1.45rem;
+  opacity: 0.9;
+}
+
+header .header {
+  position: fixed;
+  width: min(1200px, 100%);
+  z-index: 1;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .header i {
+  font-size: 1.45rem;
+  padding: 16px;
+}
+header .header i:hover {
+  background-color: rgb(204, 204, 204);
+}
+header .nav {
+  background-color: white;
+  position: fixed;
+  z-index: 2;
+  top: 0px;
+  left: 0px;
+  width: 40vw;
+  height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  overflow: auto;
+  box-shadow: 1px 0px 10px 1px gray;
+}
+header .nav a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  padding: 20px;
+}
+header .nav a:hover {
+  background-color: rgb(204, 204, 204);
+}
+header .off {
+  transform: translateX(-100%);
+  transition: transform;
+  transition-duration: 0.5s;
+}
+header .on {
+  transition: transform;
+  transition-duration: 0.5s;
+}
+
+main #food .list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
+}
+main #food .list .card {
+  text-align: center;
+}
+main #food .list .card img {
+  width: 100%;
+}
+main #food .list .card .title {
+  line-height: 2rem;
+  margin-bottom: 1rem;
+}
+main #food .list .card .description {
+  color: grey;
+}
+main #food .page-num ul {
+  margin: 2rem auto;
+  width: -moz-fit-content;
+  width: fit-content;
+  list-style-type: none;
+  display: flex;
+}
+main #food .page-num ul .active {
+  background-color: black;
+  color: white;
+}
+main #food .page-num ul li {
+  display: grid;
+  width: 2.5rem;
+  height: 2.5rem;
+  justify-content: center;
+  align-items: center;
+}
+main #food .page-num ul li:hover {
+  background-color: black;
+  color: white;
+}
+main #about {
+  margin: 5rem;
+  text-align: center;
+}
+main #about .title {
+  margin-bottom: 2rem;
+}
+main #about .intro {
+  margin: 2rem 0;
+}
+main #about .intro h3 {
+  margin-bottom: 1.5rem;
+}
+main #about .intro p {
+  margin-bottom: 2rem;
+  color: gray;
+}
+main #about .intro p:first-of-type {
+  font-style: italic;
+}
+
+footer {
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 1rem;
+}
+footer .footer p {
+  color: grey;
+  margin: 2rem 0;
+}
+footer .footer p a {
+  color: inherit;
+}
+footer .post hr {
+  background-color: grey;
+  opacity: 0.5;
+}
+footer .post .title {
+  margin-bottom: 2rem;
+}
+footer .post .item {
+  display: flex;
+  gap: 2rem;
+  padding: 1rem;
+}
+footer .post .item:hover {
+  background-color: rgb(204, 204, 204);
+}
+footer .post .item img {
+  width: 60px;
+}
+footer .post .item .info {
+  color: grey;
+}
+footer .post .item .info .name {
+  font-size: 1.25rem;
+  font-weight: 100;
+  margin-bottom: 1rem;
+}
+footer .tag .title {
+  margin-bottom: 2rem;
+}
+footer .tag .list {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  gap: 10px 5px;
+}
+footer .tag .list > div {
+  padding: 5px;
+  background-color: rgb(97, 97, 97);
+  color: white;
+  font-size: 0.75rem;
+}
+footer .tag .list .active {
+  background-color: black;
+  padding: 8px;
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,226 @@
+@mixin gridTable($row, $col,$gap){
+    display: grid;
+    grid-template-columns: repeat($col,1fr);
+    grid-template-rows: repeat($row,1fr);
+    gap: $gap;
+}
+
+@mixin flexCenter(){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+// reset 
+html{
+    scroll-behavior: smooth;
+}
+hr{
+    color: gray;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    scroll-behavior: smooth;
+    display: block;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.title{
+    font: {
+        weight:300; 
+        size: 1.45rem;
+        
+    }
+    opacity: 0.9;
+}
+
+header{
+    .header{
+        position: fixed;
+        width: min(1200px,100%);
+        z-index: 1;
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        i{
+            font-size: 1.45rem;
+            padding: 16px;
+            &:hover{
+                background-color: rgb(204, 204, 204);
+            }
+        }
+    }
+    .nav{
+        background-color: white;
+        position: fixed;
+        z-index: 2;
+        top: 0px;
+        left: 0px;
+        width: 40vw;
+        height: 100vh;
+        display: flex;
+        flex-flow: column nowrap;
+        overflow: auto;
+        box-shadow: 1px 0px 10px 1px gray;
+        a{
+            text-decoration: none;
+            color: black;
+            display: block;
+            padding: 20px;
+
+            &:hover{
+                background-color: rgb(204, 204, 204);
+            }
+        }
+    }
+
+    .off{
+        transform: translateX(-100%);
+        transition: transform;
+        transition-duration: 0.5s;
+    }
+    .on{
+        transition: transform;
+        transition-duration: 0.5s;
+    }
+}
+
+main{
+    #food{
+        .list{
+            @include gridTable(2,4,1rem);
+
+            .card{
+                text-align: center;
+                img{
+                    width: 100%;
+                }
+                .title{
+                    line-height: 2rem;
+                    margin-bottom: 1rem;
+                }
+                .description{
+                    color: grey;
+                }
+            }
+        }
+
+        .page-num{
+            ul{
+                margin: 2rem auto;
+                width: fit-content;
+                list-style-type: none;
+                display: flex;
+                .active{
+                    background-color: black;
+                    color: white;
+                }
+                li{
+                    display: grid;
+                    width: 2.5rem;
+                    height: 2.5rem;
+                    justify-content: center;
+                    align-items: center;
+                    &:hover{
+                        background-color: black;
+                        color: white;
+                    }
+                }
+            }            
+        }
+        
+
+    }
+    #about{
+        margin: 5rem;
+        text-align: center; 
+        .title{
+            margin-bottom: 2rem;
+        }
+        .intro{
+            margin: 2rem 0;
+            h3{
+                margin-bottom: 1.5rem;
+            }
+            p{
+                margin-bottom: 2rem;
+                color: gray;
+                &:first-of-type{
+                    font-style: italic;
+                }
+            }
+        }
+    }
+
+}
+
+footer{
+    margin-top: 5rem;
+    @include gridTable(1, 3, 1rem );
+    .footer{
+        p{
+            color: grey;
+            margin: 2rem 0;
+            a{
+                color: inherit;
+            }
+        }
+    }
+    .post{
+        hr{
+            background-color: grey;
+            opacity: 0.5;
+        }
+        .title{
+            margin-bottom: 2rem;
+        }
+        .item{
+            &:hover{
+                background-color: rgb(204, 204, 204);
+            }
+            display: flex;
+            gap: 2rem;
+            padding: 1rem;
+            img{
+                width: 60px;
+            }
+            .info{
+                color: grey;
+                .name{
+                    font-size: 1.25rem;
+                    font-weight: 100;
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+    }
+    .tag{
+        .title{
+            margin-bottom: 2rem;
+        }
+        .list{
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            gap: 10px 5px;
+            &>div{
+                padding: 5px;
+                background-color: rgb(97, 97, 97);
+                color: white;
+                font-size: 0.75rem;
+            }
+            .active{
+                background-color: black;
+                padding: 8px;
+            }
+            
+        }
+
+    }
+}
+
