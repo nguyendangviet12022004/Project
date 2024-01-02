@@ -10,6 +10,12 @@
     justify-content: center;
     align-items: center;
 }
+
+@mixin moblie(){
+    @media screen and (max-width: 500px){
+        @content;
+    }
+}
 // reset 
 html{
     scroll-behavior: smooth;
@@ -108,6 +114,9 @@ main{
                     color: grey;
                 }
             }
+            @include moblie(){
+                display: block;
+            }
         }
 
         .page-num{
@@ -137,8 +146,14 @@ main{
 
     }
     #about{
+        
         margin: 5rem;
         text-align: center; 
+        img{
+            @include moblie(){
+                width: 400px;
+            }
+        }
         .title{
             margin-bottom: 2rem;
         }
@@ -162,6 +177,9 @@ main{
 footer{
     margin-top: 5rem;
     @include gridTable(1, 3, 1rem );
+    @include moblie(){
+        display: block;
+    }
     .footer{
         p{
             color: grey;
@@ -220,6 +238,7 @@ footer{
             }
             
         }
+       
 
     }
 }
